@@ -30,6 +30,7 @@ public class OpenAIController {
     public Map<String, Object> askHealthQuestion(@RequestBody Map<String, String> request) {
         // 從請求中獲取用戶的問題
         String userQuestion = request.get("question");
+        System.out.println(userQuestion);
 
         // 調用服務層方法，傳遞用戶問題並獲取回應
         return openAIService.handleGeneralQuestions(userQuestion);
